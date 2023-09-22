@@ -1,0 +1,19 @@
+v: 0
+micros:
+  - name: poster_web_micro
+    src: .
+    engine: python3.9
+    primary: true
+    run: uvicorn main:app
+    dev: python venv/bin/uvicorn main:app --reload
+    actions:
+      - id: 'makepost'
+        name: 'makepost'
+        description: 'makepost'
+        trigger: 'schedule'
+        default_interval: '* * * * *'
+      - id: 'makepost2'
+        name: 'makepost2'
+        description: 'makepost2'
+        trigger: 'schedule'
+        default_interval: '* * * * *'

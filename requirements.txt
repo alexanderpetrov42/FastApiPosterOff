@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+vk_api
+python-telegram-bot
+deta
+schedule
+pillow
