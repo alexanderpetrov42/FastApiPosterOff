@@ -127,7 +127,7 @@ def post_gif_to_vk(file_content, telegram_post_link, message = None):
         response = requests.post(upload_url, files={'file': buffered_reader})
         upload_data = response.json()
         # Save uploaded document
-        saved_doc = vk.docs.save(file=upload_data['file'], title='GIF')
+        saved_doc = vk.docs.save(file=upload_data['file'], title=gif_name)
 
         sds = f"doc{saved_doc['doc']['owner_id']}_{saved_doc['doc']['id']}"
         # Post the GIF to VK.com
